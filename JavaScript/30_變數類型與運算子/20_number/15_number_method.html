@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+</head>
+
+<body>
+
+    <h4>JavaScript Number Methods</h4>
+    <p><a href="https://www.w3schools.com/js/js_number_methods.asp">https://www.w3schools.com/js/js_number_methods.asp</a></p>
+
+    <script>
+ 
+        // 10. 數值運算常見的錯誤
+        // NaN、Infinity、-Infinity
+        var apple=(100/0);
+        console.log(apple);
+        var banana=(-100/0);
+        console.log(banana);
+        // 20. 判斷數值 isNaN()  
+        //Nan=not a number 
+
+        var x = 100/10;
+        console.log(x);
+
+        var y=100/"10";
+        console.log(y);
+
+        var z=100/"Apple";
+        console.log(z);
+
+        console.log(isNaN(x));
+        console.log(isNaN(y));
+        console.log(isNaN(z));
+
+        // 30. 把文字轉換為數值 parseInt()
+        var b1="11"+1;
+        console.log(b1);///111
+
+        var b2="11"-1;
+        console.log(b2)//10
+
+        var b3=parseInt("11")+1;
+        console.log(b3);
+        // 35. 數值轉字串的方法 toString()
+        var c1=5;
+        console.log(typeof c1);//number
+        var c2=c1.toString();
+        console.log(typeof c2);
+
+    </script>
+
+</body>
+
+</html>

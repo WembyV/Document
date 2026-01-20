@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+</head>
+
+<body>
+
+    <h4>將功能獨立出來，提高程式的可用性</h4>
+    <p><a href="https://www.w3schools.com/js/js_functions.asp">https://www.w3schools.com/js/js_functions.asp</a></p>
+
+    <script>
+
+        // 10. 函式宣告（Function Declaration）
+        apple()//放在函式前也可以
+        
+
+        function apple() { //()放參數的地方
+            console.log('ok');//()立刻執行,帶入資料的地方
+        }
+        apple();//立刻執行
+
+        // 20. 需要資訊的函式 / 傳入參數的函式
+        //     呼叫需要資訊的函式時，要把資訊帶入
+        function bee(a,b){  
+            console.log(a);
+            console.log(b);
+        }
+        bee('喬八','魯夫');
+
+        bee();// 不給值就是undefind
+
+        // 30. 函式回傳值
+
+        console.clear();
+
+        function cat(){
+
+            console.log('貓咪');
+            return '黑貓';
+        }
+        var temp=cat();
+        console.log(temp);
+        
+        // 40. 函式運算式（Function Expressions）
+
+        //dog();不能往前提 跟上面apple的寫法不同
+
+        //     變數 存放 函式(計畫的內容)，但呼叫時要小心
+        // var dog=function () {
+        //     console.log('小狗');
+        // }
+        //dog();
+
+        // //上面那段的錯誤,等於以下寫法得到的錯誤
+        // var dog;
+        // dog();//錯誤dog is not a function;
+        // dog=function(){
+        //     console.log('小狗');
+        // }
+
+        // 45. 函式運算式，也可以設計有參數的形式
+        var myFunc=function(a,b){
+            return a*b;
+        }
+        console.log(myFunc(1,1));
+        var coolman = myFunc(10,2);
+        console.log(coolman);
+        
+        
+
+    </script>
+</body>
+
+</html>

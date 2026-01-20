@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+</head>
+
+<body>
+    <img src="../../img/find.png" id="apple">
+    
+    <img src="../../img/find.png" id="apple" style="top:50px";>
+    <!-- 10. 畫面上設定一張圖片 -->
+
+    <script>
+
+        // 20. 透過 元素.style.top 取得 樣式 top 值
+        var elem = document.getElementById('apple');
+        console.log(elem);
+
+        var temp = elem.style.top;
+        console.log(temp);//空的|50px 要有定義style才有辦法拿到top值
+
+        // 30. 透過 window.getComputedStyle(元素).getPropertyValue(樣式屬性);
+        var temp2 =window.getComputedStyle(elem).getPropertyValue('top');
+        console.log(temp2);//會顯示預設值給你 沒有設定還會給你一個預設值而不是給你一個空值
+        
+        
+        // 40. 觀察上述兩者差異
+
+    </script>
+</body>
+
+</html>

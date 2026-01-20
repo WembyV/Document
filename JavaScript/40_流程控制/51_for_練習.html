@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+</head>
+
+<body>
+
+    <!-- 顯示 40.、50.、60.效果的地方 -->
+    <p id="pSquare"></p>
+    <hr>
+    <p id="pTriangle"></p>
+    <hr>
+    <pre id="pTimes"></pre>
+
+    <script>
+        // 10. 使用 for 迴圈，逐一取得陣列裡面的元素
+        var weekList = ["sunday", "monday", "tuesday", "wednesday", "thursday", "friday", "saturday"];
+        var week = [];
+        for (var i = 0; i < 7; i++) {
+            week[i] = weekList[i];
+        }
+        console.log(week);
+
+        // 20. 使用 for 迴圈，計算從 1 加到 10
+        var total = 0;
+        for (var nu = 1; nu <= 10; nu++) {
+            total += nu;
+            console.log(total);
+        }
+        console.log(total);
+        // 30. 使用 for 迴圈，列印出這個月份從1號到目前系統日
+        // var d=new Date();
+        // d=d.getDate();
+        // for(var i=1;i<=d;i++){
+        //     console.log(`日期-->${i}`);
+        // }
+        // var d=new Date();
+        // var mm=(d.getMonth()+1).toString().padstart(2,'0');//padstart (字串長度,'要補的字元')
+        // var mm=(d.getMonth()+1).toString().padStart(2,'0');
+        //         console.log(mm)
+        
+        // for(var i=1;i<=d.getdate();i++){
+        //     var dd=i.toString().padStart(2,'0');
+        // }
+
+
+
+
+        // 40. 雙層迴圈 - 長方型星星 #pSquare
+        //方法A:不使用迴圈;
+        // var temp='****<br>****<br>****<br>****<br>****<br>****<br>';
+        // document.getElementById('pSquare').innerHTML=temp;
+        
+        // 方法B:使用一個迴圈
+        // var temp='';
+        // for (var i = 0; i < 5; i++) {
+        //     temp+='*****<br>';
+        //     document.getElementById('pSquare').innerHTML=temp;
+        // }
+
+        // **** 
+        // **** 
+        // **** 
+        // **** 
+        // **** 
+        // ****
+        //
+        var temp='';
+        for(var i=1;i<=6;i++){
+            for(var j=1;j<5;j++){
+                temp+='*';
+            }
+            temp+='<br>'
+        }
+        document.getElementById('pSquare').innerHTML=temp;
+
+
+        // 50. 雙層迴圈 - 三角形 #pTriangle
+        var temp='';
+        for(var i=1;i<=6;i++){
+            for(var j=1;j<i;j++){
+                temp+='*';
+            }
+            temp+='<br>'
+        }
+        document.getElementById('pTriangle').innerHTML=temp;
+           
+        // }
+        // * 
+        // **
+        // ***
+        // ****
+
+        // 60. 列印九九乘法表 (tab為 "&#9;") + <pre> 標籤 #pTimes
+            
+            var temp ='';
+            for(var i=1;i<=9;i++){
+                for(var j=1;j<=9;j++){
+                    var z=i*j;
+                    temp+=`${i}*${j}=${z}&#9;`;
+                    // if(z>=10){
+                    //     temp+=' ';
+                    // }
+                    // else{
+                    //     temp+='  ';
+                    // }
+                }
+                temp+='<br>';
+            }
+            document.getElementById('pTimes').innerHTML=temp;
+            </script>
+</body>
+
+</html>

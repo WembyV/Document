@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+</head>
+
+
+
+<body>
+    飲料杯計算
+    <p id="drink"></p>
+    <input type="text" placeholder="請輸入幾杯" id="num">
+    <br>
+    <br>
+    <input type="text" placeholder="請輸入幾元" id="dol">
+    <br>
+    <br>
+    <button onclick="drink()">計算</button>
+
+    <p id="totalresult">123</p>
+
+    <script>
+
+        // 小練習：設計一個function，傳入飲料數量和單價
+        //        數量10杯以上總金額打95折，20杯以上打9折
+
+        // 說明:
+        // 1. 函式要有回傳值: 回傳總金額
+        // 2. 函式要有兩個參數: 飲料數量和單價
+        // 3. 假設飲料均一價
+        // 4. 呼叫函式並給數量和單價，將回傳的總金額顯示在 Console(主控台)
+        
+        function drink(a, b) {
+        var total;
+        var a = document.getElementById('num');
+        console.log(a);
+        var b = document.getElementById('dol');
+        console.log(b);
+        a=a.value;
+        console.log(a);
+        b=b.value;
+        console.log(b);
+        var total =a*b;
+        console.log(total);
+        
+            if (a >= 20) {
+                total = (total) * 0.9;
+            }
+            else if (a >= 10) {
+                total = (total) * 0.95;
+            }
+            else {
+                total=total;
+            }
+            console.log(total);
+            document.getElementById('totalresult').innerText=total;
+            return total;
+        }
+    
+    </script>
+</body>
+
+</html>

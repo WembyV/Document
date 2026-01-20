@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+</head>
+
+<body>
+  
+    <script>
+        var d=new Date();
+        d=d.getHours()
+        console.log(d);
+        // 1. 取得系統現在時間(HH)
+        // 2. 如果是 8點 ~ 11點，在主控台顯示上午課程
+        if (d>8 && d<11){
+            console.log("上午課程")
+        }
+        else if(d>=11 && d<=13){
+            console.log("中午用餐");
+        }
+        else if(d>13 && d<16){
+            console.log("下午課程");
+        }
+        else{
+            console.log("非課程時間");
+        }
+        if(d>=12 && d<24){
+            console.log("PM");
+        }
+        else {
+            console.log("AM");
+        }
+        // 3. 如果是 12點，在主控台顯示中午用餐時間
+        // 4. 如果是 13點 ~ 16點，在主控台顯示下午課程
+        // 5. 其他的時段，在主控台顯示非課程時間
+        //-------------------------------------------
+        // 6. 透過三元運算子，判斷現在是 'AM' 還是 'PM'
+        //(條件)?成立時候要給的值:不成立的時候給這個值
+        
+        console.log((d<12)?'AM':'PM');
+        
+
+
+
+
+    </script>
+    
+</body>
+
+</html> 

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+</head>
+
+<body>
+
+    <h4>JavaScript Date Objects</h4>
+    <p><a href="https://www.w3schools.com/js/js_dates.asp">https://www.w3schools.com/js/js_dates.asp</a></p>
+    <h4>JavaScript Get Date Methods</h4>
+    <p><a href="https://www.w3schools.com/js/js_date_methods.asp">https://www.w3schools.com/js/js_date_methods.asp</a>
+    </p>
+    <hr>
+    <pre>
+    生成日期物件的方法：
+        new Date()
+        new Date(milliseconds)
+        new Date(dateString)
+        new Date(year, month, day, hours, minutes, seconds, milliseconds)
+    </pre>
+
+    <script>
+        // // 宣告一個時間物件
+        // var d = new Date();
+        // // 取得年份
+        // console.log(d);
+
+        // // 取得月份 (請注意這裡)
+        // console.log(d.getMonth());
+        // console.log(d.getMonth() + 1);
+
+        // 取得日期
+        // console.log(d.getDate());
+
+        // // 取得星期 (請注意這裡)
+        // // 0~6
+        // console.log(getDay());
+
+        // // 取得時間
+        // console.log(d.gethoure());
+
+        // // 取得分鐘
+        // console.log(d.getminute());
+
+        // // 若日期物件生成後，我們需要加一天
+
+        // d.setdate(12+1);
+        // console.log(d);
+
+        // 若日期物件生成後，我們需要加一個月
+        // d.setMonth(0 + 1);
+        // console.log(d);
+
+        // 小練習：如何透過日期的加減，取得這個月的最後一天?
+        // 這個月的最後一天=下個月的1號-1=下個月的第0天
+        //方法A 日期.setMouth(月,日)
+        console.clear()
+        var apple = new Date()
+        apple.setMonth(apple.getMonth() + 1, 0);
+        console.log(apple);
+        //方法B:new date(年,月,日)
+        console.clear();
+        var bee = new Date(2026, 0 + 1, 0);
+        console.log(bee);
+        console.clear();
+        var temp = new Date();
+        var bee = new Date(temp.getFullYear(), temp.getMonth() + 1, 0);
+        console.log(bee);
+
+
+
+
+        // 小練習：宣告兩個日期物件，並指定日期後，進行日期相減
+        // millisecond = 86400000 = 1000*60*60*24
+        console.clear();
+        var a= new Date('2026-01-12');
+        console.log(a);
+        var b =new Date('2026-02-12');
+        console.log(b);
+
+        var diff=b-a;
+        console.log(diff/86400000);
+
+    </script>
+
+</body>
+
+</html>
