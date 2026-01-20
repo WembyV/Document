@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //非箭頭函式|一般函式|傳統函式|非箭頭函式
+
+        //第一種:使用function關鍵字    
+        function apple() {
+            console.log(100);
+        }
+        //第二種:將變數的值設定為function
+        let bee = function () {
+            console.log(200);
+
+        }
+        apple();
+        bee();
+
+        //---------------------------------
+        //箭頭函式
+        let cat = () => { console.log(300) };
+        cat();
+
+        //---------------------------------
+        let dog = function (x) { return x + 5 };
+        let temp = dog(55);
+        console.log(temp);
+
+        let fish = x => x + 100;
+        let temp2 = fish(55);
+        console.log(temp2);
+
+
+
+    </script>
+</body>
+
+</html>

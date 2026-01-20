@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+</head>
+<body>
+    <p>v4: 該如何在 console (主控台) 顯示「皮卡丘」字串？</p>
+    <p>請找到底下備註「這裡該怎麼做?」的那一行程式碼；限制只能修改該行程式碼</p>
+    <script>
+        function apple(cat){
+            //.
+            //物件.屬性
+            //物件.方法
+
+            //屬性->{屬性:值}-->{name:陣列}
+            //cat物件有一個name屬性,name屬性的值是一個陣列
+            //陣列裡面有三個東西 東西->值->根據.選到物件
+            //物件.nickname屬性
+
+            //屬性->{屬性:值}->{nickname:字串}
+            var result = cat.name[2].nickname;
+            console.log(result);
+        }
+        //Q:陣列裡面 相同型態
+        apple({name:[{},{},{nickname:"皮卡丘v4"}]}); // 這裡該怎麼做?
+
+        
+        apple({name:[{nickmane:""},{nickname:""},{nickname:"皮卡丘v4"}]}); // 推薦正解
+    </script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="apple()">按鈕A</button>
+    <button id="bee">按鈕B</button>
+    <button id="cat">按鈕C</button>
+    <script>
+        //第一種
+        function apple(){
+            console.log("我是第一種");
+        }
+        //第二種
+        //bee按鈕物件
+        bee.onclick=function(){
+            console.log("我是第二種");
+        }
+        //第三種:
+        document.getElementById("cat").addEventListener("click",function(){
+            console.log("我是第三種");
+        })
+
+    </script>
+</body>
+</html>

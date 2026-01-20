@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <script src="../_js/jquery-3.7.1.js"></script>
+</head>
+
+<body>
+
+    <h4>jQuery()</h4>
+    <p><a href="https://api.jquery.com/jQuery/">https://api.jquery.com/jQuery/</a></p>
+    <h4>jQuery Selectors</h4>
+    <p><a
+            href="https://www.w3schools.com/jquery/jquery_ref_selectors.asp">https://www.w3schools.com/jquery/jquery_ref_selectors.asp</a>
+    </p>
+
+    <hr>
+
+    <h4>CSS 選擇器</h4>
+    <ol id="myList">
+        <li>標籤</li>
+        <li>屬性</li>
+        <li>類別</li>
+        <li>其他</li>
+    </ol>
+
+    <h4>jQuery函式庫可以做什麼？</h4>
+    <ol>
+        <li>取得元素</li>
+        <li>增減元素</li>
+        <li>尋找元素</li>
+        <li>其他</li>
+    </ol>
+
+    <script>
+        // 10. 挑選標籤: h4 
+        let x1 = $("h4");
+        console.log(x1);//4個
+        // 20. 挑選id: #myList 
+        // let x2=$("#myList");
+        // console.log(x2);
+        console.log($("#myList"));
+
+        // 30. 挑選標籤: li
+        let x3 = $("li");
+        console.log(x3);
+        // 40. 挑選標籤: 第一個出現的 li
+        let x4 = $("li");
+        console.log(x4[0]);
+
+        // 50. 挑選標籤: 各別元素中第一個出現的 li
+        //0l->第一個li
+
+        console.log($("ol:first"));
+
+        //02->第二個li
+        console.log($("ol:first-child"));
+
+        //我式分隔線------------------------------------
+
+        // 60. jQuery 函式庫是否有針對 <input> 提供特殊的選擇方式？
+    </script>
+
+</body>
+
+</html>

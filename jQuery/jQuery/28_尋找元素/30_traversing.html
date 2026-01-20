@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/30_traversing.css">
+    <script src="../_js/jquery-3.7.1.js"></script>
+</head>
+
+<body>
+
+    <button id="btnPickItem">filter</button>
+    <button id="btnFilter">filter</button>
+    <button id="btnFind">find</button>
+    <button id="btnChildren">children</button>
+    <button id="btnParent">Parent</button>
+    <button id="btnClosest">closeset</button>
+
+
+
+
+
+    <hr>
+
+    <div id="tw">
+        <h4>台灣水果</h4>
+        <ul id="twList">
+            <li class="grape">巨峰葡萄</li>
+            <li>金鑽鳳梨</li>
+            <li>麻豆文旦</li>
+            <li>小玉西瓜</li>
+            <li>大湖草莓</li>
+        </ul>
+    </div>
+
+    <div id="jp">
+        <h4>日本水果</h4>
+        <ul id="jpList">
+            <li><b class="grape">麝香葡萄</b></li>
+            <li><b>夕張哈密瓜</b></li>
+            <li><b>甘王草莓</b></li>
+            <li><b>愛媛柑橘</b></li>
+            <li><b>岡山白桃</b></li>
+        </ul>
+    </div>
+
+    <div id="demo"></div>
+
+    <script>
+
+        // * 比較底下幾種 尋找|篩選 元素的方式 *
+        //挑好的水果會放在#demo裡面
+        // 10. filter   ===> $().filter()
+
+        btnFilter.onclick = function () {
+            console.log("我正在測試 filter");
+            $('#demo').empty();
+            //疑點:為何可以一直句點?
+            // -->0120_2鏈式呼叫
+            //疑點:為何麝香葡萄不見了
+            // (jQuery)filte前一個元素集合身上有沒有指定的selectortor
+            $('li').filter('.grape').each(function () {
+                // console.log(this.innerText);
+                //<p>不是必要的 只是複習
+                $('#demo').append("<p>" + this.innerText + "</p>");
+            })
+
+        }
+        btnFind.onclick = function () {
+            // (jQuery)filte前一個元素小孩身上有沒有指定的selectortor
+            console.log("我正在測試 find");
+            $('#demo').empty();
+            $('li').find('.grape').each(function () {
+                console.log(this.innerText);
+                $('#demo').append(("<p>" + this.innerText + "</p>"));
+            })
+
+        }
+        btnChildren.onclick = function () {
+
+            //children-->$().children()
+            //->直系
+            //ul->li (找的到)
+            //ul->b  (爺孫關係找不到)
+            console.log("我正在測試 children");
+            $('#demo').empty();
+            $('ul').children('li').each(function () {
+                $('#demo').append(("<p>" + this.innerText + "</p>"));
+            })
+        }
+        btnParent.onclick = function () {
+            //grape的父元素分別式twList跟jplist
+            //但一開始grape已經認twlist為父 
+
+            console.log("我正在測試 parent");
+            $('#demo').empty();
+            $('.grape').parent().each(function () {
+                $('#demo').append(("<p>" + this.innerText + "</p>"));
+            })
+
+
+
+        }
+        btnClosest.onclick = function () {
+            //clostest -->$().closeet
+            // 內到外
+            // 下到上
+            console.log("我正在測試 closest");
+            $('#demo').empty();
+            $('.grape').closest('ul').each(function () {
+                $('#demo').append((`<p> ${this.innerText}  </p>`));
+            })
+
+                $('.grape').closest('div').each(function () {
+                $('#demo').append((`<p> ${this.innerText}  </p>`));
+            })
+
+        }
+        // 11. find     ===> $().find()
+        // 12. children ===> $().children()
+        // 13. parent   ===> $().parent()
+        // 14. closest  ===> $().closest()
+
+    </script>
+
+</body>
+
+</html>

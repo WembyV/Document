@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/30_traversing.css">
+    <script src="../_js/jquery-3.7.1.js"></script>
+</head>
+
+<body>
+
+    <h4>Category: DOM Removal</h4>
+    <p><a
+            href='https://api.jquery.com/category/manipulation/dom-removal/'>https://api.jquery.com/category/manipulation/dom-removal/</a>
+    </p>
+
+    <button onclick="apple()">empty</button>
+    <button onclick="bee()">remove</button>
+
+    <button id="btnDetach">detach</button>
+    <button id="btnRemove">remove</button>
+    <div>
+        <button id="pika">胖定</button>
+    </div>
+
+    <script>
+
+        function apple() {
+            $('#pika').empty();
+
+        }
+        function bee() {
+            $('#pika').remove();
+        }
+        // 10. 試著比較出 empty() 和 remove() 的差異
+        // ->課堂間的需求:請協助安排兩個按鈕+兩個點擊事件
+
+        // empty():使用h1標籤進行比較,看起來比較沒差
+        // 使用button標籤進行比較，得到清空的是內容
+        // remove():使用h1標籤進行比較,看起來比較沒差
+        // 使用button標籤進行比較，得到清空的是元素
+
+
+        // 20. 試著比較出 detach() 和 remove() 的差異
+        //      * jQuery 綁定事件的方法之一: $().on('事件名稱', function(){})
+        $('#pika').on('click', function () {
+            console.log('唱歌');
+
+        }
+        )
+        btnDetach.onclick = function () {
+            let x1 = $('#pika');
+            $('#pika').detach();
+            console.log("detach");
+            $('div').append(x1);
+
+
+        }
+        btnRemove.onclick = function () {
+            let x2 = $('#pika');
+            $('#pika').remove();
+            console.log("remove");
+            $('div').append(x2);
+        }
+
+
+
+    </script>
+
+</body>
+
+</html>
+
+
+
+<!-- 思考題 -->
+ <!-- ready()   text()   html()    prop()   attr()      val()
+before()  after()  prepend() append() appendTo()  
+empty()   remove() detach()
+ 
+Q: 原本畫面上有一顆按鈕，有哪些方式可以讓按鈕消失(看不見)，或者看的見，但是不能點選？ -->

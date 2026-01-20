@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <script src="../_js/jquery-3.7.1.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 以下是css */
+        button {
+            color: red;
+        }
+
+        input[type="button"] {
+            color: red;
+        }
+        button,input[type="button"]{color:yellow;}
+
+        /* :button{color:pink};//這是jQuery的所以會NG會NG */
+    </style>
+</head>
+
+<body>
+
+    <!-- 以下式HTM -->
+
+    <!-- HTML:已知 小專會用 -->
+    <button>按鈕A</button>
+    <!-- HTML:已知 小專或許會用 -->
+    <input type="button" value="按鈕B">
+    <!-- HTML:未知 大專會用 -->
+    <input type="submit" value="按鈕C">
+
+    <script>
+        //jQuery登場
+        //第一個小結論:CSS的選擇棄怎麼選,JQuery就怎麼選
+        let x1=$("input[type='button']");//不能寫$("input[type="button"]") 這樣括號的內容是input[=就結束了
+        // let x1=$("input[type="button"]");//NG樣式
+        console.log(x1);
+        //第二個小結論:在jQuery看到的選擇器，不一定是CSS的選擇器
+        let x2=$(":button");//Select <button> elements and <input> elements with type="button":
+        console.log(x2);
+        
+
+    </script>
+</body>
+
+</html>

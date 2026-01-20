@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <script src="../_js/jquery-3.7.1.js"></script>
+</head>
+
+<body>
+
+    <p>請點選登入AAA</p>
+    <h1>測試A</h1>
+    <h2>測試B</h2>
+    <button id="btnLogin">登入</button>
+
+    <script>
+
+        btnLogin.onclick = function () {
+            
+            // 10. 取得 p 元素的內容
+
+            let x1=$("p").text();
+            console.log(x1);
+            // 20. 設定 p 元素的內容
+            $("p").text("超夢");
+
+            // 30. 比較 $().text() 和 $().html() 的差異
+            $('h1').text("<i>汽車</i>"); //text():如果設定的內容有標籤，標籤變成文字
+            $('h2').html("<i>汽車</i>"); //如果設定的內容有標籤,轉化成標籤應呈現的樣子
+        }
+    </script>
+
+</body>
+
+</html>

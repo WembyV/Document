@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+</head>
+<body>
+    <p>v7: 該如何在 console (主控台) 顯示「皮卡丘」字串？</p>
+    <p>請找到底下備註「這裡該怎麼做?」的那一行程式碼；限制只能修改該行程式碼</p>
+    <script>
+        function apple(cat){
+          //  function cat(x){console.log(x);}
+            cat("皮卡丘v7");
+        }
+
+        // 方法A
+        // apple(function cat(x){console.log(x);}); // 這裡該怎麼做?
+        // // apple(function (x){console.log(x);}); // 這裡該怎麼做?
+        
+        // //方法B
+        // //apple(console.log);//函式內的參數可以是method
+
+        // //方法C 箭頭函式
+        // apple(x=>{console.log(x)})
+        
+        // //方法D 箭頭函式 之 真不想寫
+        
+        apple(x=>console.log(x));
+    
+
+    </script>
+</body>
+</html>

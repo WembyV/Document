@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p>this 是甚麼取決於你在哪裡使用他</p>
+    <p>電腦 教室 學習工具</p>
+    <p>電腦 你家 娛樂工具</p>
+    <button onclick="apple(this)">按鈕A</button>
+    <button onclick="apple(this)">按鈕B</button>
+    <button onclick="apple(this)">按鈕C</button>
+    <script>
+        //第一種:不在函式裡面|在script裡面直接查看
+        console.log(this);//window物件
+
+        // 第二種:事件後方 呼叫函式把this當作值
+        function apple(cat) {
+            console.log(cat);//誰發生事情就是誰
+        }
+        //第三種:下周一繼續 01/19 這邊開始
+        //JS :物件結構 ->{Key:value}->{自己想要的英文單字:五選一}
+        //JS:函式結構->function->function  ->自己想要的英文單字(參數){想做的事}
+        //JS:箭頭結構->  ()=>{} -> 自己想要的英文單字(參數){想做的事}
+        let x={
+            bee:5566,
+            dog:function(){
+                //呼叫dog方法|函式 的時候想做的事:把this放到主控台看一看
+                console.log(this);//x物件
+            },
+            egg:()=>{
+                console.log(this);//window物件
+            }
+        };
+        console.log("分隔線");
+        //呼叫x物件dog的方法|函式
+        x.dog();
+        console.log("分隔線");
+        
+        console.log("分隔線v2");
+        //呼叫x物件dog的方法|函式
+        x.egg();
+        console.log("分隔線v2");
+        
+        
+
+
+    </script>
+</body>
+
+</html>

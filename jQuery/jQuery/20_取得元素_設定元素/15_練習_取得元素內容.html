@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <script src="../_js/jquery-3.7.1.js"></script>
+</head>
+
+<body>
+
+    <h3 id="t--">Hello</h3>
+
+    <span id="a+b">1</span>
+    <span id="a-b">2</span>
+    <span id="a*b">3</span>
+    <span id="a/b">4</span>
+
+    <!-- css的選擇器 有一個元素的id值為a 後面 b標籤-->
+     <div id="a"></div>
+    <b>電腦鍵盤</b>
+
+    <script>
+
+        // 10. 挑選 h3 元素，並且將抓取裡面的內容 
+        //      目標：取得 Hello 文字
+
+        //javascropt 取得的方式
+        console.log(document.getElementById('t--').innerText);
+        console.log(document.getElementById('a+b').innerText);
+        console.log(document.getElementById('a-b').innerText);
+        console.log(document.getElementById('a*b').innerText);
+        console.log(document.getElementById('a/b').innerText);
+        
+        
+        //jQuery取得的方式
+
+        // Q為何1沒有出現
+        console.log($('#a+b').text());//A:因為+被解讀成後面(css的選擇器)
+        console.log($('#a-b').text());
+        console.log($('#a*b').text());//A:因為+被解讀成後面(被解讀成通用選擇器)
+        console.log($('#a/b').text());//A:因為+被解讀成後面(請)
+        
+        
+        // 20. 透過 JavaScript 的方式抓取內容
+        //      目標：取得 1 ~ 4
+        
+        // 30. 透過 jQuery 的方式抓取內容
+        //      目標：取得 1 ~ 4
+        
+    </script>
+
+</body>
+
+</html>
